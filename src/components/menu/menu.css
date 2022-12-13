@@ -1,0 +1,238 @@
+.menu {
+  display: flex;
+  visibility: visible;
+  flex-direction: column;
+  background-color: var(--black-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: all 0.7s ease;
+  z-index: 2;
+  animation: scale-up-tr 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.menu__container {
+  display: flex;
+  visibility: visible;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 3.26rem;
+  padding: 0.6rem 1.25rem 0.6rem 1.25rem;
+}
+
+.menu__logo {
+  font-family: 'OpenSans-ExtraBold', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--white-color);
+  font-size: 1.4rem;
+  letter-spacing: 0.01rem;
+}
+
+.menu__menu-icon {
+  cursor: pointer;
+  display: flex;
+  visibility: visible;
+  align-items: center;
+}
+
+.menu__close-button {
+  display: inline-block;
+  margin-left: 1.2rem;
+}
+
+.menu__close-icon-line1,
+.menu__close-icon-line2 {
+  width: 1.25rem;
+  height: 0.125rem;
+  background-color: var(--white-color);
+  margin: 0.25rem 0;
+}
+
+.menu__close-icon-line1 {
+  transform: matrix(0.71, -0.71, 0.71, 0.71, 0, 1);
+}
+
+.menu__close-icon-line2 {
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, -5);
+}
+
+.menu__content {
+  display: flex;
+  visibility: visible;
+  width: 100%;
+  padding: 5rem 1.25rem 0 1.25rem;
+}
+
+.menu__list {
+  display: flex;
+  visibility: visible;
+  flex-direction: column;
+  width: 100%;
+}
+
+.menu__items {
+  display: flex;
+  visibility: visible;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding-top: 0.5rem;
+  cursor: pointer;
+  border-bottom: 0.3px solid var(--dark-border-color);
+}
+
+.menu__items:last-child {
+  border: none;
+}
+
+.menu__items a {
+  display: flex;
+  visibility: visible;
+  text-decoration: none;
+  color: var(--white-color);
+  font-family: 'OpenSans-Regular', sans-serif;
+  text-transform: uppercase;
+  font-size: 2.1rem;
+  line-height: 2.9rem;
+  transition: 0.4s;
+}
+
+.menu__landen {
+  display: none;
+  visibility: hidden;
+}
+
+.menu__triangle-icon {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(63deg)
+    brightness(104%) contrast(103%);
+  display: none;
+  visibility: hidden;
+  margin-right: 0.3rem;
+}
+a:hover .menu__triangle-icon {
+  display: flex;
+  visibility: visible;
+}
+
+.menu__list:hover .menu__items a {
+  color: var(--dark-color);
+}
+
+.menu__list .menu__items a:hover,
+.menu__list .menu__items a:active {
+  color: var(--white-color);
+  font-family: 'OpenSans-Regular-SemiBold', sans-serif;
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+  ##and
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+  ##and
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 768px) {
+  .menu {
+    align-items: center;
+  }
+  .menu__container {
+    padding: 0.6rem 0 0.6rem 0;
+    width: 85%;
+  }
+
+  .menu__content {
+    padding: 5rem 7.5% 0 7.5%;
+  }
+
+  .menu__items {
+    padding: 1rem 0 0.2rem 0;
+  }
+
+  .menu__items a {
+    font-size: 3rem;
+  }
+
+  .menu__landen {
+    display: flex;
+    visibility: visible;
+    background-color: var(--black-color);
+    position: absolute;
+  }
+
+  .menu__landen {
+    left: 7.5%;
+    top: 4.1rem;
+  }
+
+
+  .menu__landen-items li,{
+    line-height: 0.94rem;
+  }
+
+  .menu__landen-items li,
+  .menu__landen-items a{
+    text-decoration: none;
+    color: var(--white-color);
+    font-family: 'OpenSans-Regular', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    cursor: pointer;
+    display: flex;
+    visibility: visible;
+    align-items: center;
+  }
+
+  .menu__landen-items li {
+    color: var(--light-font-color);
+  }
+
+  .menu__landen-items a > .menu__triangle-icon {
+    height: 0.8rem;
+  }
+
+  .menu__landen-items a:hover,
+  .menu__landen-items a:hover {
+    font-family: 'OpenSans-SemiBold', sans-serif;
+  }
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .menu__items {
+    padding: 1.3rem 0 0.4rem 0;
+  }
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 1281px) {
+  .menu__items {
+    padding: 1.4rem 0 0.5rem 0;
+  }
+
+  .menu__items a {
+    font-size: 3rem;
+  }
+
+  .menu__landen {
+    top: 5.1rem;
+  }
+
+  .menu__landen-items li,
+  .menu__landen-items a {
+    font-size: 0.9rem;
+    line-height: 1rem;
+  }
+}

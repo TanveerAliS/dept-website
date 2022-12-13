@@ -1,0 +1,128 @@
+.filters {
+  display: flex;
+  visibility: visible;
+  flex-direction: row;
+  padding: 1rem ;
+  background-color: var(--black-color);
+}
+
+.filters__filter-works,
+.filters__filter-industries {
+  display: flex;
+  visibility: visible;
+  justify-content: flex-end;
+}
+
+.filters__label-works,
+.filters__label-industries {
+  font-family: 'Maison-Neue';
+  color: var(--dark-border-color);
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  line-height: 1.4rem;
+}
+
+.filters__select-works,
+.filters__select-industries {
+  display: block;
+  visibility: visible;
+  background: transparent;
+  font-family: 'Maison-Neue';
+  color: var(--gray-dark-font-color);
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  box-sizing: border-box;
+  margin: 0 0 0 0.4rem;
+  border: none;
+  border-bottom: 1px solid black;
+  appearance: none;
+  line-height: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0;
+  color: var(--white-color);
+}
+
+.filters__select-works {
+  width: 22%;
+  min-width: 80px;
+}
+
+.filters__select-industries {
+  width: 32%;
+  min-width: 120px;
+}
+
+.filters__select::-ms-expand {
+  display: none;
+  visibility: hidden;
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+  .filters__select-works {
+    width: 20%;
+  }
+
+  .filters__select-industries {
+    width: 28%;
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+  ##and
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+  ##and
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 768px) {
+  .filters {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3rem 2rem 2rem;
+    margin-top: 0;
+    background-color: var(--white-color);
+  }
+
+  .filters__filter-works,
+  .filters__filter-industries {
+    justify-content: flex-end;
+    align-items: baseline;
+  }
+
+  .filters__filter-works {
+    max-width: 12rem;
+  }
+
+  .filters__filter-industries {
+    max-width: 9.5rem;
+    margin-left: 1rem;
+  }
+
+  .filters__select-works {
+    background-color: var(--white-color);
+    width: 5.2rem;
+    color: black;
+  }
+
+  .filters__select-industries {
+    background-color: var(--white-color);
+    width: 7.7rem;
+    color: black;
+  }
+
+  .filters__label-works {
+    color: var(--dark-border-color);
+  }
+
+  .filters__label-industries {
+    width: 1rem;
+  }
+}

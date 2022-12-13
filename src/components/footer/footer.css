@@ -1,0 +1,279 @@
+.footer {
+  display: flex;
+  visibility: visible;
+  flex-direction: column;
+  padding: 3rem 2rem;
+  background-color: var(--black-color);
+}
+
+.footer__menu {
+  display: flex;
+  visibility: visible;
+  padding-bottom: 3rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--dark-color);
+}
+
+.footer__title {
+  display: none;
+  visibility: hidden;
+}
+
+.footer__list {
+  display: flex;
+  visibility: visible;
+  flex-direction: column;
+  width: 50%;
+}
+
+.footer__menu > .footer__list ~ .footer__list {
+  align-items: flex-end;
+}
+
+.footer__menu-item {
+  margin-bottom: 2rem;
+}
+
+.footer__menu-item a {
+  font-family: 'Maison-Neue';
+  color: var(--white-color);
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  cursor: pointer;
+}
+
+.footer__menu-item a:hover {
+  color: var(--light-font-color);
+  font-size: 2.1rem;
+}
+
+.footer__info-section {
+  display: flex;
+  visibility: visible;
+  flex-direction: column;
+}
+
+.footer__info-section p {
+  color: var(--light-font-color);
+  font-family: 'Maison-Neue';
+  font-size: 0.7rem;
+  letter-spacing: 0.02rem;
+  line-height: 1.4rem;
+}
+
+.footer__company-info {
+  padding-top: 2rem;
+}
+
+.footer__top-column {
+  display: none;
+  visibility: hidden;
+}
+
+.footer__socialMediaLinks-item img {
+  width: 20px;
+  margin-bottom: 2rem;
+}
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+  ##and
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+  ##and
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 768px) {
+  .footer__socialMediaLinks-item {
+display: none; 
+ }
+  .footer {
+    padding: 4rem 7.5% 3rem 7.5%;
+  }
+
+  .footer__menu {
+    padding-bottom: 0;
+    align-items: baseline;
+  }
+
+  .footer__list {
+    flex-direction: row;
+    width: 75%;
+  }
+
+  .footer__menu-item {
+    display: flex;
+    visibility: visible;
+    padding: 0 0.8rem 0 0;
+  }
+
+  .footer__menu-item a {
+    font-size: 1rem;
+  }
+
+  .footer__menu-item a:hover {
+    font-size: 1.9rem;
+  }
+
+  .footer__menu > .footer__list ~ .footer__list {
+    width: 25%;
+    justify-content: flex-end;
+  }
+
+  .footer__info-section,
+  .footer__company-info {
+    display: flex;
+    visibility: visible;
+  }
+
+  .footer__company-info p {
+    margin-right: 1.5rem;
+  }
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+  ##and
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 1025px) {
+  .footer {
+    flex-direction: row;
+    padding: 0;
+    background-color: var(--white-color);
+  }
+
+  .footer__line {
+    background-color: var(--black-color);
+    padding: 4rem 7.5% 3rem 7.5%;
+    width: 90%;
+  }
+
+  .footer__top-column {
+    display: flex;
+    visibility: visible;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+  }
+
+  .footer__top-column .footer__top-button {
+    display: flex;
+    visibility: visible;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 38%;
+    font-family: 'OpenSans-Regular', sans-serif;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--blue-color);
+    background-color: transparent;
+    border: none;
+    border-radius: none;
+    cursor: pointer;
+  }
+
+  .footer__top-column img {
+    filter: invert(14%) sepia(95%) saturate(4414%) hue-rotate(244deg)
+      brightness(86%) contrast(130%);
+    height: 2rem;
+    transition: height 0.2s ease-in-out;
+  }
+
+  .footer__top-column .footer__top-button:hover img {
+    height: 2.8rem;
+  }
+
+  .footer__title {
+    display: flex;
+    visibility: visible;
+    font-family: 'OpenSans-ExtraBold', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 2.2rem;
+    letter-spacing: 0.01rem;
+    width: 200px;
+  }
+
+  .footer__list {
+    align-items: flex-end;
+  }
+
+  .footer__menu-item {
+    padding-right: 1.5rem;
+  }
+
+  .footer__menu-item a {
+    font-size: 1rem;
+  }
+
+  .footer__menu-item a:hover {
+    font-size: 1.7rem;
+  }
+
+  .footer__info-section {
+    display: flex;
+    visibility: visible;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer__company-info {
+    width: 45%;
+    justify-content: space-between;
+  }
+
+  .footer__info-section > .footer__company-info ~ .footer__company-info {
+    width: 25%;
+    justify-content: flex-end;
+  }
+
+  .footer__company-info p {
+    font-size: 0.7rem;
+  }
+
+  .footer__company-info p {
+    margin-right: 0;
+  }
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 1281px) {
+  .footer__company-info p {
+    font-size: 0.9rem;
+  }
+
+  .footer__menu-item a {
+    font-size: 1rem;
+  }
+
+  .footer__menu-item a:hover {
+    font-size: 1.9rem;
+  }
+
+  .footer__top-column .footer__top-button {
+    width: 40%;
+    height: 38%;
+    font-size: 1.8rem;
+  }
+
+  .footer__top-column img {
+    height: 2.2rem;
+  }
+
+  .footer__top-column .footer__top-button:hover img {
+    height: 3rem;
+  }
+}

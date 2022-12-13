@@ -1,0 +1,97 @@
+.modal {
+  position: fixed;
+  z-index: 2;
+  padding-top: 7rem;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__content {
+  display: flex;
+  visibility: visible;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white-color);
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+  height: 70%;
+  box-shadow: 0 0 1.25rem 0 rgba(0, 0, 0, 0.35);
+  animation: scale-up-center 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.modal__title {
+  font-family: 'OpenSans-Light', sans-serif;
+  color: var(--dark-color);
+  font-size: 2.2rem;
+  line-height: 2.3rem;
+  letter-spacing: 0.07rem;
+}
+
+.modal__close-button {
+  font-family: 'OpenSans-SemiBold', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.93rem;
+  letter-spacing: 0.04rem;
+  color: var(--white-color);
+  background-color: var(--blue-color);
+  padding: 0.9rem 3.5rem 0.9rem 3.5rem;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  margin-top: 3rem;
+  box-shadow: none;
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.modal__close-button:hover {
+  box-shadow: 0 0 0.3rem 0.1rem var(--blue-color);
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+  ##and
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+  ##and
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 768px) {
+  .modal__title {
+    font-size: 2.5rem;
+    line-height: 2rem;
+    letter-spacing: 0.05rem;
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .modal__content {
+    width: 70%;
+    height: 60%;
+  }
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+  ##and
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 1025px) {
+  .modal__content {
+    width: 60%;
+    height: 50%;
+  }
+}

@@ -1,0 +1,95 @@
+.works {
+  display: flex;
+  visibility: visible;
+  flex-direction: column;
+  /* padding: 0 1rem 1rem 1rem; */
+  width: 100%;
+}
+
+.works__cards-line,
+.works__cards-line--reverse {
+  display: flex;
+  visibility: visible;
+  flex-direction: column;
+  width: 100%;
+}
+
+.works__cards-column {
+  display: flex;
+  visibility: visible;
+  flex-direction: column;
+  width: 100%;
+  background: var(--black-color);;
+  padding: 1rem 2rem;
+}
+
+.works__error-message {
+  font-family: 'OpenSans-Light', sans-serif;
+  color: var(--dark-color);
+  font-size: 2.2rem;
+  line-height: 2.3rem;
+  letter-spacing: 0.07rem;
+  margin-top: 2rem;
+}
+
+.works__desktop-only {
+  display: none;
+  visibility: hidden;
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+  .works {
+    /* padding: 1rem 1rem 3rem 1rem; */
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+  ##and
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+  ##and
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 768px) {
+  .works {
+    /* padding: 1rem 7.5% 3rem 7.5%; */
+  }
+
+  .works__cards-line--reverse {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .works__cards-line {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .works__cards-column {
+    width: 35%;
+    background-color: var(--black-color);
+    padding: 1rem 2rem;
+  }
+
+  .works__cards {
+    display: flex;
+    visibility: visible;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .works__desktop-only {
+    display: flex;
+    visibility: visible;
+    flex-direction: column;
+    width: 65%;
+  }
+}

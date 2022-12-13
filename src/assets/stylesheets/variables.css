@@ -1,0 +1,15 @@
+body {
+  --black-color: #000000;
+  --black-footer-color: #121212;
+  --dark-color: #272727;
+  --gray-dark-font-color: #0e0e0e;
+  --gray-font-color: #595959;
+  --light-font-color: #939393;
+  --dark-border-color: #a3a3a3;
+  --input-border-color: #dddddd;
+  --light-border-color: #e2e2e2;
+  --light-color: #f3f6f6;
+  --white-color: #ffffff;
+  --blue-color: #1a18f7;
+  --red-color: #b30000;
+}

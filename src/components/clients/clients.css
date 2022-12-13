@@ -1,0 +1,122 @@
+.clients {
+  display: flex;
+  visibility: visible;
+  flex-direction: column;
+  align-items: start;
+  padding: 1.2rem;
+  background-color: var(--black-color);
+}
+
+.clients__title {
+  font-family: 'Maison-Neue';
+  text-transform: uppercase;
+  color: var(--white-color);
+  font-size: 2.1rem;
+  letter-spacing: 0.07rem;
+  margin: 1.4rem 0 1.4rem 0;
+}
+
+.clients__content {
+  font-family: 'Maison-Neue';
+  color: var(--white-color);
+  font-size: 1.15rem;
+  line-height: 1.8rem;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  overflow: hidden;
+}
+
+.clients__images {
+  display: flex;
+  visibility: visible;
+  flex-wrap: wrap;
+  margin-bottom: 1.2rem;
+}
+
+.clients__images--desktop-only {
+  display: none;
+  visibility: hidden;
+}
+
+.clients__logo {
+  display: flex;
+  visibility: visible;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  padding: 2rem;
+}
+
+.clients__logo img {
+  cursor: pointer;
+  transform: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+.clients__logo img:hover {
+  transform: rotate(20deg);
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+  ##and
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+  ##and
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 768px) {
+  .clients {
+    padding: 1.2rem 7.5% 3rem 7.5%;
+  }
+
+  .clients__title {
+    margin: 1.2rem 0 0.5rem 0;
+  }
+
+  .clients__content {
+    font-size: 1rem;
+    width: 60%;
+  }
+
+  .clients__images {
+    display: none;
+    visibility: hidden;
+  }
+
+  .clients__images--desktop-only {
+    display: flex;
+    visibility: visible;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    padding: 1rem 5rem 0 5rem;
+  }
+
+  .clients__logo {
+    width: 25%;
+    padding: 1.3rem;
+  }
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+  ##and
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 1025px) {
+  .clients__content {
+    font-size: 1.1rem;
+  }
+
+  .clients__logo {
+    padding: 2rem;
+  }
+}

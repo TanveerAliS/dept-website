@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'OpenSans-Bold';
+  src: url('../fonts/opensans-bold/opensans-bold.woff2') format('woff2'),
+    url('../fonts/opensans-bold/opensans-bold.woff') format('woff'),
+    url('../fonts/opensans-bold/opensans-bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-ExtraBold';
+  src: url('../fonts/opensans-extrabold/opensans-extrabold.woff2')
+      format('woff2'),
+    url('../fonts/opensans-extrabold/opensans-extrabold.woff') format('woff'),
+    url('../fonts/opensans-extrabold/opensans-extrabold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url('../fonts/opensans-light/opensans-light.woff2') format('woff2'),
+    url('../fonts/opensans-light/opensans-light.woff') format('woff'),
+    url('../fonts/opensans-light/opensans-light.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url('../fonts/opensans-regular/opensans-regular.woff2') format('woff2'),
+    url('../fonts/opensans-regular/opensans-regular.woff') format('woff'),
+    url('../fonts/opensans-regular/opensans-regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-SemiBold';
+  src: url('../fonts/opensans-semibold/opensans-semibold.woff2') format('woff2'),
+    url('../fonts/opensans-semibold/opensans-semibold.woff') format('woff'),
+    url('../fonts/opensans-semibold/opensans-semibold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Maison-Neue';
+  src: url('../fonts/maison-neue/maison-neue.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Maison-Neue-Bold';
+  src: url('../fonts/maison-neue-bold/Maison-Neue-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* recommended style for visually hiding content that will be read by a screen reader */
+.screen-reader-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* animations from https://animista.net/ */
+@keyframes sunburns-bottom-right {
+  0% {
+    -webkit-transform: scale(1) translate(0, 0);
+    transform: scale(1) translate(0, 0);
+    -webkit-transform-origin: 84% 84%;
+    transform-origin: 84% 84%;
+  }
+  100% {
+    -webkit-transform: scale(1.25) translate(20px, 15px);
+    transform: scale(1.25) translate(20px, 15px);
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+  }
+}
+@keyframes scale-up-tr {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
